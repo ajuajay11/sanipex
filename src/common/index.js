@@ -1,3 +1,3 @@
-import party_background_pattern from "../assets/images/party_background_pattern.webp";
+import logo from "../assets/SANIPEXGROUP_-_BYSTRO_BAGNODESIGN_GYMKHANA_Logo_BLACK__1_1.svg";
 
-export { MantisImage, MantisImageOne };
+export { logo };

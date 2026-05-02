@@ -6,7 +6,7 @@
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
-  --accent: #aa3bff;
+  --accent: rgb(255, 113, 113);
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
@@ -26,17 +26,21 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
-} 
+
+}
+
 html.lenis {
   height: auto;
 }
+
 .lenis.lenis-smooth {
   scroll-behavior: auto;
 }
+
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
 .lenis.lenis-stopped {
   overflow: hidden;
 }
@@ -45,4 +49,19 @@ body {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
+}
+.sale{
+  background: linear-gradient(135deg, var(--accent) 0%, #a00e26 100%);
+}
+.topheader {
+  font-size: 12px;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo-img {
+  width: 350px;
+  height: auto;
 }
