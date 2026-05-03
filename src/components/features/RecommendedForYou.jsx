@@ -31,7 +31,7 @@ export default function RecommendedForYou({
           Recommended for you
         </h2>
 
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-3 md:grid-cols-2 md:grid-rows-2 md:gap-4 md:min-h-[min(520px,72vh)]">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:grid-rows-2 md:gap-4 md:min-h-[min(520px,72vh)]">
           <Link
             to={link}
             className={`${tileLinkClass} min-h-[min(280px,55vw)] md:row-span-2 md:min-h-0`}
@@ -71,7 +71,7 @@ export default function RecommendedForYou({
               alt="Sale — promotional offers"
               className={imgClass}
             />
-             
+
           </Link>
         </div>
       </section>
