@@ -1,0 +1,206 @@
+ .brand-card {
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.2s ease,
+        border-color 0.25s ease;
+    animation: fadeSlideUp 0.35s ease both;
+}
+
+ .brand-card--standard {
+    border-radius: 12px;
+    border: 2px solid color-mix(in srgb, var(--template-color-primary) 8%, transparent);
+}
+
+.brand-card:hover,
+.brand-card:focus-visible {
+    box-shadow:
+        rgba(17, 17, 26, 0.05) 0px 1px 0px,
+        rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    transform: translateY(-2px);
+}
+
+.brand-card:active {
+    transform: scale(0.97);
+    box-shadow: none;
+}
+
+.brand-card--standard .brand-card__logo {
+    object-fit: contain;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.brand-card--standard .brand-card__name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+     
+    text-align: center;
+    pointer-events: none;   
+    color: #1f2937;
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 6px));
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    font-size: clamp(14px, 3vw, 22px);
+    text-decoration: none;
+}
+
+.brand-card--standard:hover .brand-card__logo,
+.brand-card--standard:focus-visible .brand-card__logo {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.brand-card--standard:hover .brand-card__name,
+.brand-card--standard:focus-visible .brand-card__name {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+ 
+@keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* //filter nav */
+
+  .filter-nav {
+    background-color: #f8f8f875;
+    
+    border-radius: 8px;
+   
+  }
+
+   .filter-category-label {
+    position: relative;
+  }
+
+  .filter-category-label::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    z-index: 1;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    border: 1px solid #9ca3af;
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+    font-size: 11px;
+    transition:
+      transform 0.35s ease,
+      background-color 0.35s ease,
+      color 0.35s ease;
+    transform: scale(0);
+  }
+
+  .filter-category-label img {
+    transition: transform 0.2s ease;
+    transform-origin: 50% 50%;
+  }
+
+  .peer:checked + .filter-category-label::before {
+    content: "✓";
+    background-color: var(--template-color-primary);
+    color: #fff;
+    transform: scale(1);
+  }
+
+  .peer:checked + .filter-category-label img {
+    transform: scale(0.92);
+  }
+
+  .alpha-btn {
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-secondary);
+    transition: background 0.18s ease, color 0.18s ease;
+    cursor: pointer;
+}
+
+.alpha-btn:hover {
+    background: var(--template-color-secondary);
+ }
+
+.alpha-btn--active {
+    background: var(--template-color-secondary);
+ }
+
+.alpha-btn--disabled {
+    background: #f9fafb;
+    border-color: #f3f4f6;
+    color: #d1d5db;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* header-categories.css */
+.hcat-nav--horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.hcat-nav--drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.hcat-link {
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.18s ease;
+}
+
+.hcat-link--drawer {
+    white-space: normal;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.18s ease;
+}
+
+.hcat-link--drawer:hover {
+    background: #f9fafb;
+}
+ 
+.hcat-badge {
+    position: absolute;
+    right: -27px;
+    top: -3px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--template-color-primary);
+    padding: 1px 4px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.hcat-badge--drawer {
+    right: 4px;
+    top: -6px;
+}

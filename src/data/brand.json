@@ -1,931 +1,1170 @@
 {
-  "page": "Brands",
-  "breadcrumb": ["Home", "Brands"],
-  "filters": {
-    "search": "",
-    "alphabet": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
-    "categories": [
-      { "id": "bathroom",    "label": "Bathroom" },
-      { "id": "tiles_suite", "label": "Tiles & Suite" },
-      { "id": "kitchen",     "label": "Kitchen" },
-      { "id": "outdoor",     "label": "Outdoor" },
-      { "id": "lighting",    "label": "Lighting" },
-      { "id": "hardware",    "label": "Hardware" },
-      { "id": "hospitality", "label": "Hospitality" }
+    "page": "Brands",
+    "breadcrumb": ["Home", "Brands"],
+    "filters": {
+        "search": "",
+        "alphabet": [
+            { "id": 1,  "letter": "A", "disabled": false },
+            { "id": 2,  "letter": "B", "disabled": false },
+            { "id": 3,  "letter": "C", "disabled": false },
+            { "id": 4,  "letter": "D", "disabled": false },
+            { "id": 5,  "letter": "E", "disabled": false },
+            { "id": 6,  "letter": "F", "disabled": false },
+            { "id": 7,  "letter": "G", "disabled": false },
+            { "id": 8,  "letter": "H", "disabled": false },
+            { "id": 9,  "letter": "I", "disabled": false },
+            { "id": 10, "letter": "J", "disabled": false },
+            { "id": 11, "letter": "K", "disabled": false },
+            { "id": 12, "letter": "L", "disabled": false },
+            { "id": 13, "letter": "M", "disabled": false },
+            { "id": 14, "letter": "N", "disabled": false },
+            { "id": 15, "letter": "O", "disabled": false },
+            { "id": 16, "letter": "P", "disabled": false },
+            { "id": 17, "letter": "Q", "disabled": true  },
+            { "id": 18, "letter": "R", "disabled": false },
+            { "id": 19, "letter": "S", "disabled": false },
+            { "id": 20, "letter": "T", "disabled": false },
+            { "id": 21, "letter": "U", "disabled": false },
+            { "id": 22, "letter": "V", "disabled": false },
+            { "id": 23, "letter": "W", "disabled": false },
+            { "id": 24, "letter": "X", "disabled": true  },
+            { "id": 25, "letter": "Y", "disabled": true  },
+            { "id": 26, "letter": "Z", "disabled": true  }
+        ],
+        "categories": [
+            { "id": "bathroom",    "label": "Bathroom" },
+            { "id": "tiles_suite", "label": "Tiles & Suite" },
+            { "id": "kitchen",     "label": "Kitchen" },
+            { "id": "outdoor",     "label": "Outdoor" },
+            { "id": "lighting",    "label": "Lighting" },
+            { "id": "hardware",    "label": "Hardware" },
+            { "id": "hospitality", "label": "Hospitality" }
+        ]
+    },
+    "sections": [
+        {
+            "letter": "A",
+            "brands": [
+                {
+                    "id": "aquadrain",
+                    "name": "AQUADRAIN",
+                    "nameHighlight": "AQUA",
+                    "nameRest": "DRAIN",
+                    "slug": "aquadrain",
+                    "url": "https://sanipexgroup.com/brands/aquadrain",
+                    "type": "featured",
+                    "image": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/Aquadrain_1.webp",
+                    "logo": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/AQUADRAIN-2_1.webp",
+                    "description": "High-quality, design-led shower channels and floor drains for domestic, commercial and industrial installations. AQUADRAIN caters to the finer details of design and specification, covering an extensive range of luxury finishes to coordinate with your brassware. Crafted from industrial-grade stainless steel, all products are anti-bacterial, easy to clean and anti-corrosive.",
+                    "categories": ["bathroom"]
+                },
+                {
+                    "id": "aquaeco",
+                    "name": "AQUAECO",
+                    "nameHighlight": "AQUA",
+                    "nameRest": "ECO",
+                    "slug": "aquaeco",
+                    "url": "https://sanipexgroup.com/brands/aquaeco",
+                    "type": "featured",
+                    "image": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/aquaeco_1.webp",
+                    "logo": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/AQUAECO-1_1.webp",
+                    "description": "Discover AQUAECO's comprehensive collection of durable and reliable washroom solutions that cater to the diverse needs of the commercial and residential sectors. Offering a compelling combination of quality, reliability, and outstanding value, the range includes sanitaryware, touchless taps and dispensers, bidet sprays, valves and flush plates in an array of on-trend finishes.",
+                    "categories": ["bathroom", "kitchen"]
+                },
+                {
+                    "id": "a-emotional-light",
+                    "name": "A Emotional Light",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "a-emotional-light",
+                    "url": "https://sanipexgroup.com/brands/a-emotional-light",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/A_EMOTIONAL_LIGHT_LOGO_1.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                },
+                {
+                    "id": "alice",
+                    "name": "Alice",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "alice",
+                    "url": "https://sanipexgroup.com/brands/alice",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/ALICE_LOGO_1.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                },
+                {
+                    "id": "aliseo",
+                    "name": "Aliseo",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "aliseo",
+                    "url": "https://sanipexgroup.com/brands/aliseo",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/ALISEO_LOGO_1.png",
+                    "description": null,
+                    "categories": ["bathroom"]
+                },
+                {
+                    "id": "ariana",
+                    "name": "Ariana",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "ariana",
+                    "url": "https://sanipexgroup.com/brands/ariana",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/ARIANA_LOGO_1.webp",
+                    "description": null,
+                    "categories": ["bathroom", "hospitality"]
+                },
+                {
+                    "id": "armac-martin",
+                    "name": "Armac Martin",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "armac-martin",
+                    "url": "https://sanipexgroup.com/brands/armac-martin",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/ARMAC_MARTIN_LOGO_Nero_1.svg",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "astro-lighting",
+                    "name": "Astro Lighting",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "astro-lighting",
+                    "url": "https://sanipexgroup.com/brands/astro-lighting",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/ASTRO_LOGO.png",
+                    "description": null,
+                    "categories": ["kitchen", "hardware"]
+                },
+                {
+                    "id": "axent",
+                    "name": "AXENT",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "axent",
+                    "url": "https://sanipexgroup.com/brands/axent",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/AXENT_LOGO_1.webp",
+                    "description": null,
+                    "categories": ["lighting"]
+                }
+            ]
+        },
+        {
+            "letter": "B",
+            "brands": [
+                {
+                    "id": "bagnodesign",
+                    "name": "BAGNODESIGN",
+                    "nameHighlight": "BAGNO",
+                    "nameRest": "DESIGN",
+                    "slug": "bagnodesign",
+                    "url": "https://sanipexgroup.com/brands/bagnodesign",
+                    "type": "featured",
+                    "image": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/GINZA_CATEGORY_PAGE_BANNER_03_1.webp",
+                    "logo": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/BAGNODESIGN_3-1_2.webp",
+                    "description": "Create luxurious, design-led bathrooms from an extensive range of sanitaryware, furniture, brassware, accessories, bath & shower components and spa solutions. Turning spaces into spa-like sanctuaries, BAGNODESIGN is where comfort meets quality and function meets the latest in artisanal thinking.",
+                    "categories": ["bathroom", "hospitality"]
+                },
+                {
+                    "id": "bystro",
+                    "name": "BYSTRO",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "bystro",
+                    "url": "https://sanipexgroup.com/brands/bystro",
+                    "type": "featured",
+                    "image": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/bystro.webp",
+                    "logo": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/BYSTRO_LOGO_1_1.svg",
+                    "description": "Designed for how we live, cook and connect. Discover indoor and outdoor kitchen appliances, small appliances and fixtures inspired by Italian design.",
+                    "categories": ["kitchen"]
+                },
+                {
+                    "id": "biopietra",
+                    "name": "Biopietra",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "biopietra",
+                    "url": "https://sanipexgroup.com/brands/biopietra",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/BIOPIETRA_LOGO_1_1.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "bongio",
+                    "name": "Bongio",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "bongio",
+                    "url": "https://sanipexgroup.com/brands/bongio",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/BONGIO_LOGO.png",
+                    "description": null,
+                    "categories": ["bathroom"]
+                },
+                {
+                    "id": "boretti",
+                    "name": "Boretti",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "boretti",
+                    "url": "https://sanipexgroup.com/brands/boretti",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/BORETTI_LOGO_1.png",
+                    "description": null,
+                    "categories": ["kitchen"]
+                },
+                {
+                    "id": "bover",
+                    "name": "Bover",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "bover",
+                    "url": "https://sanipexgroup.com/brands/bover",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/BOVER_LOGO.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                },
+                {
+                    "id": "bugatti",
+                    "name": "Bugatti",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "bugatti",
+                    "url": "https://sanipexgroup.com/brands/bugatti",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/BUGATTI_LOGO.png",
+                    "description": null,
+                    "categories": ["kitchen"]
+                }
+            ]
+        },
+        {
+            "letter": "C",
+            "brands": [
+                {
+                    "id": "cane-line",
+                    "name": "Cane-Line",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "cane-line",
+                    "url": "https://sanipexgroup.com/brands/cane-line",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/CANELINE_LOGO_2.png",
+                    "description": null,
+                    "categories": ["outdoor"]
+                },
+                {
+                    "id": "carmenta",
+                    "name": "Carmenta",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "carmenta",
+                    "url": "https://sanipexgroup.com/brands/carmenta",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/carm_1.webp",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "cerdomus",
+                    "name": "Cerdomus",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "cerdomus",
+                    "url": "https://sanipexgroup.com/brands/cerdomus",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/CERDOMUS_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "coem",
+                    "name": "Coem",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "coem",
+                    "url": "https://sanipexgroup.com/brands/coem",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/COEM_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "contardi",
+                    "name": "Contardi",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "contardi",
+                    "url": "https://sanipexgroup.com/brands/contardi",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/CONTARDI_LOGO.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                }
+            ]
+        },
+        {
+            "letter": "D",
+            "brands": [
+                {
+                    "id": "del-conca",
+                    "name": "Del Conca",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "del-conca",
+                    "url": "https://sanipexgroup.com/brands/del-conca",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/DEL_CONCA_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "dolphin",
+                    "name": "Dolphin",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "dolphin",
+                    "url": "https://sanipexgroup.com/brands/dolphin",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/DOLPHIN_LOGO_2024.png",
+                    "description": null,
+                    "categories": ["bathroom", "hardware"]
+                },
+                {
+                    "id": "dornbracht",
+                    "name": "Dornbracht",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "dornbracht",
+                    "url": "https://sanipexgroup.com/brands/dornbracht",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/DORN_BRACHT.png",
+                    "description": null,
+                    "categories": ["bathroom"]
+                },
+                {
+                    "id": "dyson",
+                    "name": "Dyson",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "dyson",
+                    "url": "https://sanipexgroup.com/brands/dyson",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/DYSON_LOGO_1.png",
+                    "description": null,
+                    "categories": ["bathroom"]
+                }
+            ]
+        },
+        {
+            "letter": "E",
+            "brands": [
+                {
+                    "id": "ecosmart-fire",
+                    "name": "EcoSmart Fire",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "ecosmart-fire",
+                    "url": "https://sanipexgroup.com/brands/ecosmart-fire",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/ECO_SMART_FIRE_LOGO.png",
+                    "description": null,
+                    "categories": ["outdoor"]
+                },
+                {
+                    "id": "ekinex",
+                    "name": "Ekinex",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "ekinex",
+                    "url": "https://sanipexgroup.com/brands/ekinex",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/EKINEX_LOGO.png",
+                    "description": null,
+                    "categories": ["hardware"]
+                },
+                {
+                    "id": "elleci",
+                    "name": "Elleci",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "elleci",
+                    "url": "https://sanipexgroup.com/brands/elleci",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/ELLECI_LOGO_1.png",
+                    "description": null,
+                    "categories": ["kitchen"]
+                }
+            ]
+        },
+        {
+            "letter": "F",
+            "brands": [
+                {
+                    "id": "faber",
+                    "name": "Faber",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "faber",
+                    "url": "https://sanipexgroup.com/brands/faber",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/FABER_LOGO.png",
+                    "description": null,
+                    "categories": ["kitchen"]
+                },
+                {
+                    "id": "fap-ceramiche",
+                    "name": "FAP Ceramiche",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "fap-ceramiche",
+                    "url": "https://sanipexgroup.com/brands/fap-ceramiche",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/FAP_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "fhiaba",
+                    "name": "Fhiaba",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "fhiaba",
+                    "url": "https://sanipexgroup.com/brands/fhiaba",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/FHIABA_LOGO.png",
+                    "description": null,
+                    "categories": ["kitchen"]
+                },
+                {
+                    "id": "fioranese",
+                    "name": "Fioranese",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "fioranese",
+                    "url": "https://sanipexgroup.com/brands/fioranese",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/FIORANESE_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "flammkraft",
+                    "name": "Flammkraft",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "flammkraft",
+                    "url": "https://sanipexgroup.com/brands/flammkraft",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/FLAMMKRAFT_LOGO_1.png",
+                    "description": null,
+                    "categories": ["outdoor"]
+                },
+                {
+                    "id": "fulgor-milano",
+                    "name": "Fulgor Milano",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "fulgor-milano",
+                    "url": "https://sanipexgroup.com/brands/fulgor-milano",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/FULGOR_LOGO.png",
+                    "description": null,
+                    "categories": ["kitchen"]
+                }
+            ]
+        },
+        {
+            "letter": "G",
+            "brands": [
+                {
+                    "id": "gymkhana",
+                    "name": "GYMKHANA",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "gymkhana",
+                    "url": "https://sanipexgroup.com/brands/gymkhana",
+                    "type": "featured",
+                    "image": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/GYMKHANA_MAJLIS_BANNER_OPTION_2_59__5_1.webp",
+                    "logo": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/MicrosoftTeams-image_35_.png",
+                    "description": "Everything you need to create a relaxing outdoor oasis. GYMKHANA brings a comprehensive range of stylish outdoor solutions for luxury lounging, al fresco dining, and relaxing by the pool.",
+                    "categories": ["outdoor"]
+                },
+                {
+                    "id": "gaggenau",
+                    "name": "GAGGENAU",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "gaggenau",
+                    "url": "https://sanipexgroup.com/brands/gaggenau",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/GAGGENAU_LOGO.png",
+                    "description": null,
+                    "categories": ["kitchen"]
+                },
+                {
+                    "id": "galassia",
+                    "name": "Galassia",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "galassia",
+                    "url": "https://sanipexgroup.com/brands/galassia",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/GARDENIA_ARIANA_LOGO.png",
+                    "description": null,
+                    "categories": ["bathroom", "hospitality"]
+                },
+                {
+                    "id": "gardenia-orchidea",
+                    "name": "Gardenia & Ariana",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "gardenia-orchidea",
+                    "url": "https://sanipexgroup.com/brands/gardenia-orchidea",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/GARDENIA_ARIANA_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "geberit",
+                    "name": "GEBERIT",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "geberit",
+                    "url": "https://sanipexgroup.com/brands/geberit",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/GEBERIT_LOGO.png",
+                    "description": null,
+                    "categories": ["bathroom"]
+                }
+            ]
+        },
+        {
+            "letter": "H",
+            "brands": [
+                {
+                    "id": "hewi",
+                    "name": "HEWI",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "hewi",
+                    "url": "https://sanipexgroup.com/brands/hewi",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/HEWI_1_2.svg",
+                    "description": null,
+                    "categories": ["bathroom", "hardware", "hospitality"]
+                },
+                {
+                    "id": "hind-rabii",
+                    "name": "Hind Rabii",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "hind-rabii",
+                    "url": "https://sanipexgroup.com/brands/hind-rabii",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/HINDI_RABII_LOGO_1.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                },
+                {
+                    "id": "hisle",
+                    "name": "HISLE",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "hisle",
+                    "url": "https://sanipexgroup.com/brands/hisle",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/HISLE_LOGO.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                },
+                {
+                    "id": "heathfield-co",
+                    "name": "Heathfield & Co",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "heathfield-co",
+                    "url": "https://sanipexgroup.com/brands/heathfield-co",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/HEATHFIELD_CO_LOGO_01_2.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                }
+            ]
+        },
+        {
+            "letter": "I",
+            "brands": [
+                {
+                    "id": "idea-group",
+                    "name": "IDEA GROUP",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "idea-group",
+                    "url": "https://sanipexgroup.com/brands/idea-group",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/IDEA_GROUP_LOGO.png",
+                    "description": null,
+                    "categories": ["bathroom"]
+                }
+            ]
+        },
+        {
+            "letter": "J",
+            "brands": [
+                {
+                    "id": "jadams-co",
+                    "name": "J.ADAMS & Co",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "jadams-co",
+                    "url": "https://sanipexgroup.com/brands/jadams-co",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/J_ADAMS_CO_LOGO.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                },
+                {
+                    "id": "jati-kebon",
+                    "name": "JATI · KEBON",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "jati-kebon",
+                    "url": "https://sanipexgroup.com/brands/jati-kebon",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/JATI_KEBON_LOGO_5.png",
+                    "description": null,
+                    "categories": ["outdoor"]
+                },
+                {
+                    "id": "jee-o",
+                    "name": "JEE-O",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "jee-o",
+                    "url": "https://sanipexgroup.com/brands/jee-o",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/JEE-O_LOGO.png",
+                    "description": null,
+                    "categories": ["bathroom"]
+                }
+            ]
+        },
+        {
+            "letter": "K",
+            "brands": [
+                {
+                    "id": "knightsbridge",
+                    "name": "Knightsbridge",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "knightsbridge",
+                    "url": "https://sanipexgroup.com/brands/knightsbridge",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/KNIGHTSBRIDGE_LOGO.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                }
+            ]
+        },
+        {
+            "letter": "L",
+            "brands": [
+                {
+                    "id": "lefroy-brooks",
+                    "name": "Lefroy Brooks",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "lefroy-brooks",
+                    "url": "https://sanipexgroup.com/brands/lefroy-brooks",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/LEFROY_BROOKS_600_x_600_1.jpg",
+                    "description": null,
+                    "categories": ["bathroom"]
+                },
+                {
+                    "id": "leonardo",
+                    "name": "LEONARDO",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "leonardo",
+                    "url": "https://sanipexgroup.com/brands/leonardo",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/LEONARDO_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "lofra",
+                    "name": "LOFRA",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "lofra",
+                    "url": "https://sanipexgroup.com/brands/lofra",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/LOFRA_LOGO.png",
+                    "description": null,
+                    "categories": ["kitchen"]
+                }
+            ]
+        },
+        {
+            "letter": "M",
+            "brands": [
+                {
+                    "id": "micro",
+                    "name": "Micro.",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "micro",
+                    "url": "https://sanipexgroup.com/brands/micro",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/MICRO_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                }
+            ]
+        },
+        {
+            "letter": "N",
+            "brands": [
+                {
+                    "id": "noblii",
+                    "name": "Noblii",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "noblii",
+                    "url": "https://sanipexgroup.com/brands/noblii",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/NOBILI_LOGO_4.png",
+                    "description": null,
+                    "categories": ["bathroom", "hospitality"]
+                },
+                {
+                    "id": "northern-lights",
+                    "name": "Northern Lights",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "northern-lights",
+                    "url": "https://sanipexgroup.com/brands/northern-lights",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/Northern_Lights_Artboard_1.webp",
+                    "description": null,
+                    "categories": ["lighting"]
+                },
+                {
+                    "id": "novellini",
+                    "name": "NOVELLINI",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "novellini",
+                    "url": "https://sanipexgroup.com/brands/novellini",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/logo-default.png",
+                    "description": null,
+                    "categories": ["bathroom"]
+                }
+            ]
+        },
+        {
+            "letter": "O",
+            "brands": [
+                {
+                    "id": "optimum",
+                    "name": "OPTIMUM",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "optimum",
+                    "url": "https://sanipexgroup.com/brands/optimum",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/OPTIMUM_600_x_600.jpg",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                }
+            ]
+        },
+        {
+            "letter": "P",
+            "brands": [
+                {
+                    "id": "panaria",
+                    "name": "Panaria",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "panaria",
+                    "url": "https://sanipexgroup.com/brands/panaria",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/PANARIA_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                }
+            ]
+        },
+        {
+            "letter": "R",
+            "brands": [
+                {
+                    "id": "richmond",
+                    "name": "RICHMOND",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "richmond",
+                    "url": "https://sanipexgroup.com/brands/richmond",
+                    "type": "featured",
+                    "image": "https://sanipexgroup.com/cdn-cgi/image/format=webp…catalog/category/Richmond_Hero_brand_page-1d.webp",
+                    "logo": "https://sanipexgroup.com/cdn-cgi/image/format=webp…group.com/media/catalog/category/richmond_2_1.jpg",
+                    "description": "Make your guests' stay memorable. RICHMOND is a hand-selected range of hotel amenities designed with luxury, comfort and pampering in mind.",
+                    "categories": ["hospitality", "hardware"]
+                },
+                {
+                    "id": "reginox",
+                    "name": "REGINOX",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "reginox",
+                    "url": "https://sanipexgroup.com/brands/reginox",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/REGINOX_LOGO.png",
+                    "description": null,
+                    "categories": ["kitchen"]
+                },
+                {
+                    "id": "rina-menardi",
+                    "name": "rina menardi",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "rina-menardi",
+                    "url": "https://sanipexgroup.com/brands/rina-menardi",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/RINA_MENARDI_LOGO_2.png",
+                    "description": null,
+                    "categories": ["outdoor"]
+                },
+                {
+                    "id": "royal-botania",
+                    "name": "Royal Botania",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "royal-botania",
+                    "url": "https://sanipexgroup.com/brands/royal-botania",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/ROYAL_BOTANIA_LOGO_1.png",
+                    "description": null,
+                    "categories": ["outdoor", "lighting"]
+                },
+                {
+                    "id": "rs",
+                    "name": "RS",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "rs",
+                    "url": "https://sanipexgroup.com/brands/rs",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/RS_BARCELONA_LOGO.png",
+                    "description": null,
+                    "categories": ["outdoor"]
+                }
+            ]
+        },
+        {
+            "letter": "S",
+            "brands": [
+                {
+                    "id": "sanaura",
+                    "name": "Sanaura",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "sanaura",
+                    "url": "https://sanipexgroup.com/brands/sanaura",
+                    "type": "featured",
+                    "image": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/Sanaura-_HERO.webp",
+                    "logo": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/SANAURA_LOGO_1.svg",
+                    "description": "Derived from the name 'SANIPEX' and 'aura' — meaning light and atmosphere — SANAURA offers luminaires for a range of needs and for every space, indoors and out.",
+                    "categories": ["lighting"]
+                },
+                {
+                    "id": "surfaces",
+                    "name": "Surfaces",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "surfaces",
+                    "url": "https://sanipexgroup.com/brands/surfaces",
+                    "type": "featured",
+                    "image": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/BRAND_SURFACES_BY_BAGNODESIGN_MAIN_BANNER_01.webp",
+                    "logo": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/SURFACES_BY_BAGNODESIGN_LOGO_1_2.svg",
+                    "description": "A collection of the latest trends in many textures, finishes, sizes and formats, SURFACES by BAGNODESIGN offers a unique range of tiles and slabs for indoor and outdoor spaces.",
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "sant-agostino",
+                    "name": "SANT'AGOSTINO",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "sant-agostino",
+                    "url": "https://sanipexgroup.com/brands/sant-agostino",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/CERAMICA_SANT_AGOSTINO_LOGO.webp",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "sartoria",
+                    "name": "SARTORIA",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "sartoria",
+                    "url": "https://sanipexgroup.com/brands/sartoria",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/SARTORIA_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "settecento",
+                    "name": "SETTECENTO",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "settecento",
+                    "url": "https://sanipexgroup.com/brands/settecento",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/SETTECENTO_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "stella-1882",
+                    "name": "Stella 1882",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "stella-1882",
+                    "url": "https://sanipexgroup.com/brands/stella-1882",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/Stella_website_logos_Artboard_1.webp",
+                    "description": null,
+                    "categories": ["bathroom"]
+                }
+            ]
+        },
+        {
+            "letter": "T",
+            "brands": [
+                {
+                    "id": "terratinta",
+                    "name": "terratinta ceramiche",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "terratinta",
+                    "url": "https://sanipexgroup.com/brands/terratinta",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/TERRATINTA_CERAMICHE_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "tom-rossau",
+                    "name": "TOM ROSSAU",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "tom-rossau",
+                    "url": "https://sanipexgroup.com/brands/tom-rossau",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/TOM_ROSSAU_LOGO_1.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                },
+                {
+                    "id": "tubadzin",
+                    "name": "TUBĄDZIN",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "tubadzin",
+                    "url": "https://sanipexgroup.com/brands/tubadzin",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/TUBADZIN_LOGO.png",
+                    "description": null,
+                    "categories": ["tiles_suite"]
+                },
+                {
+                    "id": "tubes",
+                    "name": "TUBES",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "tubes",
+                    "url": "https://sanipexgroup.com/brands/tubes",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/TUBES_TAGLINE_LOGO_1.png",
+                    "description": null,
+                    "categories": ["outdoor"]
+                }
+            ]
+        },
+        {
+            "letter": "U",
+            "brands": [
+                {
+                    "id": "urban-life",
+                    "name": "URBAN LIFE",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "urban-life",
+                    "url": "https://sanipexgroup.com/brands/urban-life",
+                    "type": "featured",
+                    "image": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/URBAN_LIFE.webp",
+                    "logo": "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=auto,height=auto/https://sanipexgroup.com/media/catalog/category/URBAN_LIFE_LOGO.png",
+                    "description": "Emphasising safety, practicality, and convenience, Urban Life provides stylish, contemporary outdoor furniture for public spaces. Crafted from durable materials, the range includes benches, litter bins, planters, bike racks.",
+                    "categories": ["outdoor"]
+                }
+            ]
+        },
+        {
+            "letter": "V",
+            "brands": [
+                {
+                    "id": "vistosi",
+                    "name": "Vistosi",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "vistosi",
+                    "url": "https://sanipexgroup.com/brands/vistosi",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/VISTOSI_LOGO.png",
+                    "description": null,
+                    "categories": ["lighting"]
+                },
+                {
+                    "id": "vitrifrigo",
+                    "name": "VITRIFRIGO",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "vitrifrigo",
+                    "url": "https://sanipexgroup.com/brands/vitrifrigo",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/VITRIFRIGO_LOGO.png",
+                    "description": null,
+                    "categories": ["kitchen", "hospitality"]
+                },
+                {
+                    "id": "vola",
+                    "name": "vola",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "vola",
+                    "url": "https://sanipexgroup.com/brands/vola",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/VOLA_LOGO.png",
+                    "description": null,
+                    "categories": ["bathroom"]
+                }
+            ]
+        },
+        {
+            "letter": "W",
+            "brands": [
+                {
+                    "id": "wellis",
+                    "name": "Wellis",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "wellis",
+                    "url": "https://sanipexgroup.com/brands/wellis",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/WELLIS_LOGO.png",
+                    "description": null,
+                    "categories": ["outdoor"]
+                },
+                {
+                    "id": "windisch",
+                    "name": "Windisch",
+                    "nameHighlight": null,
+                    "nameRest": null,
+                    "slug": "windisch",
+                    "url": "https://sanipexgroup.com/brands/windisch",
+                    "type": "standard",
+                    "image": null,
+                    "logo": "https://sanipexgroup.com/media/catalog/category/WINDISCH_LOGO_1.png",
+                    "description": null,
+                    "categories": ["bathroom"]
+                }
+            ]
+        }
     ]
-  },
-  "cardBehavior": {
-    "featured": {
-      "layout": "image-left + content-right",
-      "alwaysShows": ["image", "title", "description", "categoryIcons"],
-      "hover": "none"
-    },
-    "standard": {
-      "layout": "logo centered",
-      "defaultState": "logo only",
-      "hoverState": "logo → brand name text (categoryIcons always visible)"
-    }
-  },
-  "sections": [
-    {
-      "letter": "A",
-      "brands": [
-        {
-          "id": "aquadrain",
-          "name": "AQUADRAIN",
-          "slug": "aquadrain",
-          "url": "https://sanipexgroup.com/brands/aquadrain",
-          "type": "featured",
-          "image": "/images/brands/aquadrain.jpg",
-          "description": "High-quality, design-led shower channels and floor drains for domestic, commercial and industrial installations. AQUADRAIN caters to the finer details of design and specification, covering an extensive range of luxury finishes to coordinate with your brassware. Crafted from industrial-grade stainless steel, all products are anti-bacterial, easy to clean and anti-corrosive.",
-          "categories": ["bathroom"]
-        },
-        {
-          "id": "aquaeco",
-          "name": "AQUAECO",
-          "slug": "aquaeco",
-          "url": "https://sanipexgroup.com/brands/aquaeco",
-          "type": "featured",
-          "image": "/images/brands/aquaeco.jpg",
-          "description": "Discover AQUAECO's comprehensive collection of durable and reliable washroom solutions that cater to the diverse needs of the commercial and residential sectors. Offering a compelling combination of quality, reliability, and outstanding value, the range includes sanitaryware, touchless taps and dispensers, bidet sprays, valves and flush plates in an array of on-trend finishes.",
-          "categories": ["bathroom", "kitchen"]
-        },
-        {
-          "id": "a-emotional-light",
-          "name": "A Emotional Light",
-          "slug": "a-emotional-light",
-          "url": "https://sanipexgroup.com/brands/a-emotional-light",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        },
-        {
-          "id": "alice",
-          "name": "Alice",
-          "slug": "alice",
-          "url": "https://sanipexgroup.com/brands/alice",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        },
-        {
-          "id": "aliseo",
-          "name": "Aliseo",
-          "slug": "aliseo",
-          "url": "https://sanipexgroup.com/brands/aliseo",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        },
-        {
-          "id": "ariana",
-          "name": "Ariana",
-          "slug": "ariana",
-          "url": "https://sanipexgroup.com/brands/ariana",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom", "hospitality"]
-        },
-        {
-          "id": "armac-martin",
-          "name": "Armac Martin",
-          "slug": "armac-martin",
-          "url": "https://sanipexgroup.com/brands/armac-martin",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "astro-lighting",
-          "name": "Astro Lighting",
-          "slug": "astro-lighting",
-          "url": "https://sanipexgroup.com/brands/astro-lighting",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen", "hardware"]
-        },
-        {
-          "id": "axent",
-          "name": "AXENT",
-          "slug": "axent",
-          "url": "https://sanipexgroup.com/brands/axent",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        }
-      ]
-    },
-    {
-      "letter": "B",
-      "brands": [
-        {
-          "id": "bagnodesign",
-          "name": "BAGNODESIGN",
-          "slug": "bagnodesign",
-          "url": "https://sanipexgroup.com/brands/bagnodesign",
-          "type": "featured",
-          "image": "/images/brands/bagnodesign.jpg",
-          "description": "Create luxurious, design-led bathrooms from an extensive range of sanitaryware, furniture, brassware, accessories, bath & shower components and spa solutions. Turning spaces into spa-like sanctuaries, BAGNODESIGN is where comfort meets quality and function meets the latest in artisanal thinking.",
-          "categories": ["bathroom", "hospitality"]
-        },
-        {
-          "id": "bystro",
-          "name": "BYSTRO",
-          "slug": "bystro",
-          "url": "https://sanipexgroup.com/brands/bystro",
-          "type": "featured",
-          "image": "/images/brands/bystro.jpg",
-          "description": "Designed for how we live, cook and connect. Discover indoor and outdoor kitchen appliances, small appliances and fixtures inspired by Italian design.",
-          "categories": ["kitchen"]
-        },
-        {
-          "id": "biopietra",
-          "name": "Biopietra",
-          "slug": "biopietra",
-          "url": "https://sanipexgroup.com/brands/biopietra",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "bongio",
-          "name": "Bongio",
-          "slug": "bongio",
-          "url": "https://sanipexgroup.com/brands/bongio",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        },
-        {
-          "id": "boretti",
-          "name": "Boretti",
-          "slug": "boretti",
-          "url": "https://sanipexgroup.com/brands/boretti",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen"]
-        },
-        {
-          "id": "bover",
-          "name": "Bover",
-          "slug": "bover",
-          "url": "https://sanipexgroup.com/brands/bover",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        },
-        {
-          "id": "bugatti",
-          "name": "Bugatti",
-          "slug": "bugatti",
-          "url": "https://sanipexgroup.com/brands/bugatti",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen"]
-        }
-      ]
-    },
-    {
-      "letter": "C",
-      "brands": [
-        {
-          "id": "cane-line",
-          "name": "Cane-Line",
-          "slug": "cane-line",
-          "url": "https://sanipexgroup.com/brands/cane-line",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["outdoor"]
-        },
-        {
-          "id": "carmenta",
-          "name": "Carmenta",
-          "slug": "carmenta",
-          "url": "https://sanipexgroup.com/brands/carmenta",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "cerdomus",
-          "name": "Cerdomus",
-          "slug": "cerdomus",
-          "url": "https://sanipexgroup.com/brands/cerdomus",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "coem",
-          "name": "Coem",
-          "slug": "coem",
-          "url": "https://sanipexgroup.com/brands/coem",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "contardi",
-          "name": "Contardi",
-          "slug": "contardi",
-          "url": "https://sanipexgroup.com/brands/contardi",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        }
-      ]
-    },
-    {
-      "letter": "D",
-      "brands": [
-        {
-          "id": "del-conca",
-          "name": "Del Conca",
-          "slug": "del-conca",
-          "url": "https://sanipexgroup.com/brands/del-conca",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "dolphin",
-          "name": "Dolphin",
-          "slug": "dolphin",
-          "url": "https://sanipexgroup.com/brands/dolphin",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom", "hardware"]
-        },
-        {
-          "id": "dornbracht",
-          "name": "Dornbracht",
-          "slug": "dornbracht",
-          "url": "https://sanipexgroup.com/brands/dornbracht",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        },
-        {
-          "id": "dyson",
-          "name": "Dyson",
-          "slug": "dyson",
-          "url": "https://sanipexgroup.com/brands/dyson",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        }
-      ]
-    },
-    {
-      "letter": "E",
-      "brands": [
-        {
-          "id": "ecosmart-fire",
-          "name": "EcoSmart Fire",
-          "slug": "ecosmart-fire",
-          "url": "https://sanipexgroup.com/brands/ecosmart-fire",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["outdoor"]
-        },
-        {
-          "id": "ekinex",
-          "name": "Ekinex",
-          "slug": "ekinex",
-          "url": "https://sanipexgroup.com/brands/ekinex",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["hardware"]
-        },
-        {
-          "id": "elleci",
-          "name": "Elleci",
-          "slug": "elleci",
-          "url": "https://sanipexgroup.com/brands/elleci",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen"]
-        }
-      ]
-    },
-    {
-      "letter": "F",
-      "brands": [
-        {
-          "id": "faber",
-          "name": "Faber",
-          "slug": "faber",
-          "url": "https://sanipexgroup.com/brands/faber",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen"]
-        },
-        {
-          "id": "fap-ceramiche",
-          "name": "FAP Ceramiche",
-          "slug": "fap-ceramiche",
-          "url": "https://sanipexgroup.com/brands/fap-ceramiche",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "fhiaba",
-          "name": "Fhiaba",
-          "slug": "fhiaba",
-          "url": "https://sanipexgroup.com/brands/fhiaba",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen"]
-        },
-        {
-          "id": "fioranese",
-          "name": "Fioranese",
-          "slug": "fioranese",
-          "url": "https://sanipexgroup.com/brands/fioranese",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "flammkraft",
-          "name": "Flammkraft",
-          "slug": "flammkraft",
-          "url": "https://sanipexgroup.com/brands/flammkraft",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["outdoor"]
-        },
-        {
-          "id": "fulgor-milano",
-          "name": "Fulgor Milano",
-          "slug": "fulgor-milano",
-          "url": "https://sanipexgroup.com/brands/fulgor-milano",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen"]
-        }
-      ]
-    },
-    {
-      "letter": "G",
-      "brands": [
-        {
-          "id": "gymkhana",
-          "name": "GYMKHANA",
-          "slug": "gymkhana",
-          "url": "https://sanipexgroup.com/brands/gymkhana",
-          "type": "featured",
-          "image": "/images/brands/gymkhana.jpg",
-          "description": "Everything you need to create a relaxing outdoor oasis. GYMKHANA brings a comprehensive range of stylish outdoor solutions for luxury lounging, al fresco dining, and relaxing by the pool. From contemporary sofa sets, swing chairs and dining options to umbrellas, pool loungers and lighting in a range of finishes, GYMKHANA's collection is designed to enhance your outdoor experience.",
-          "categories": ["outdoor"]
-        },
-        {
-          "id": "gaggenau",
-          "name": "GAGGENAU",
-          "slug": "gaggenau",
-          "url": "https://sanipexgroup.com/brands/gaggenau",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen"]
-        },
-        {
-          "id": "galassia",
-          "name": "Galassia",
-          "slug": "galassia",
-          "url": "https://sanipexgroup.com/brands/galassia",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom", "hospitality"]
-        },
-        {
-          "id": "gardenia-orchidea",
-          "name": "Gardenia & Ariana",
-          "slug": "gardenia-orchidea",
-          "url": "https://sanipexgroup.com/brands/gardenia-orchidea",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "geberit",
-          "name": "GEBERIT",
-          "slug": "geberit",
-          "url": "https://sanipexgroup.com/brands/geberit",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        }
-      ]
-    },
-    {
-      "letter": "H",
-      "brands": [
-        {
-          "id": "hewi",
-          "name": "HEWI",
-          "slug": "hewi",
-          "url": "https://sanipexgroup.com/brands/hewi",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom", "hardware", "hospitality"]
-        },
-        {
-          "id": "hind-rabii",
-          "name": "Hind Rabii",
-          "slug": "hind-rabii",
-          "url": "https://sanipexgroup.com/brands/hind-rabii",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        },
-        {
-          "id": "hisle",
-          "name": "HISLE",
-          "slug": "hisle",
-          "url": "https://sanipexgroup.com/brands/hisle",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        },
-        {
-          "id": "heathfield-co",
-          "name": "Heathfield & Co",
-          "slug": "heathfield-co",
-          "url": "https://sanipexgroup.com/brands/heathfield-co",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        }
-      ]
-    },
-    {
-      "letter": "I",
-      "brands": [
-        {
-          "id": "idea-group",
-          "name": "IDEA GROUP",
-          "slug": "idea-group",
-          "url": "https://sanipexgroup.com/brands/idea-group",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        }
-      ]
-    },
-    {
-      "letter": "J",
-      "brands": [
-        {
-          "id": "jadams-co",
-          "name": "J.ADAMS & Co",
-          "slug": "jadams-co",
-          "url": "https://sanipexgroup.com/brands/jadams-co",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        },
-        {
-          "id": "jati-kebon",
-          "name": "JATI · KEBON",
-          "slug": "jati-kebon",
-          "url": "https://sanipexgroup.com/brands/jati-kebon",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["outdoor"]
-        },
-        {
-          "id": "jee-o",
-          "name": "JEE-O",
-          "slug": "jee-o",
-          "url": "https://sanipexgroup.com/brands/jee-o",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        }
-      ]
-    },
-    {
-      "letter": "K",
-      "brands": [
-        {
-          "id": "knightsbridge",
-          "name": "Knightsbridge",
-          "slug": "knightsbridge",
-          "url": "https://sanipexgroup.com/brands/knightsbridge",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        }
-      ]
-    },
-    {
-      "letter": "L",
-      "brands": [
-        {
-          "id": "lefroy-brooks",
-          "name": "Lefroy Brooks",
-          "slug": "lefroy-brooks",
-          "url": "https://sanipexgroup.com/brands/lefroy-brooks",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        },
-        {
-          "id": "leonardo",
-          "name": "LEONARDO",
-          "slug": "leonardo",
-          "url": "https://sanipexgroup.com/brands/leonardo",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "lofra",
-          "name": "LOFRA",
-          "slug": "lofra",
-          "url": "https://sanipexgroup.com/brands/lofra",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen"]
-        }
-      ]
-    },
-    {
-      "letter": "M",
-      "brands": [
-        {
-          "id": "micro",
-          "name": "Micro.",
-          "slug": "micro",
-          "url": "https://sanipexgroup.com/brands/micro",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        }
-      ]
-    },
-    {
-      "letter": "N",
-      "brands": [
-        {
-          "id": "noblii",
-          "name": "Noblii",
-          "slug": "noblii",
-          "url": "https://sanipexgroup.com/brands/noblii",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom", "hospitality"]
-        },
-        {
-          "id": "northern-lights",
-          "name": "Northern Lights",
-          "slug": "northern-lights",
-          "url": "https://sanipexgroup.com/brands/northern-lights",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        },
-        {
-          "id": "novellini",
-          "name": "NOVELLINI",
-          "slug": "novellini",
-          "url": "https://sanipexgroup.com/brands/novellini",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        }
-      ]
-    },
-    {
-      "letter": "O",
-      "brands": [
-        {
-          "id": "optimum",
-          "name": "OPTIMUM",
-          "slug": "optimum",
-          "url": "https://sanipexgroup.com/brands/optimum",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        }
-      ]
-    },
-    {
-      "letter": "P",
-      "brands": [
-        {
-          "id": "panaria",
-          "name": "Panaria",
-          "slug": "panaria",
-          "url": "https://sanipexgroup.com/brands/panaria",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        }
-      ]
-    },
-    {
-      "letter": "R",
-      "brands": [
-        {
-          "id": "richmond",
-          "name": "RICHMOND",
-          "slug": "richmond",
-          "url": "https://sanipexgroup.com/brands/richmond",
-          "type": "featured",
-          "image": "/images/brands/richmond.jpg",
-          "description": "Make your guests' stay memorable. RICHMOND is a hand-selected range of hotel amenities designed with luxury, comfort and pampering in mind.",
-          "categories": ["hospitality", "hardware"]
-        },
-        {
-          "id": "reginox",
-          "name": "REGINOX",
-          "slug": "reginox",
-          "url": "https://sanipexgroup.com/brands/reginox",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen"]
-        },
-        {
-          "id": "rina-menardi",
-          "name": "rina menardi",
-          "slug": "rina-menardi",
-          "url": "https://sanipexgroup.com/brands/rina-menardi",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["outdoor"]
-        },
-        {
-          "id": "royal-botania",
-          "name": "Royal Botania",
-          "slug": "royal-botania",
-          "url": "https://sanipexgroup.com/brands/royal-botania",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["outdoor", "lighting"]
-        },
-        {
-          "id": "rs",
-          "name": "RS",
-          "slug": "rs",
-          "url": "https://sanipexgroup.com/brands/rs",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["outdoor"]
-        }
-      ]
-    },
-    {
-      "letter": "S",
-      "brands": [
-        {
-          "id": "sanaura",
-          "name": "Sanaura",
-          "slug": "sanaura",
-          "url": "https://sanipexgroup.com/brands/sanaura",
-          "type": "featured",
-          "image": "/images/brands/sanaura.jpg",
-          "description": "Derived from the name 'SANIPEX' and 'aura' — meaning light and atmosphere — SANAURA offers luminaires for a range of needs and for every space, indoors and out.",
-          "categories": ["lighting"]
-        },
-        {
-          "id": "surfaces",
-          "name": "Surfaces",
-          "slug": "surfaces",
-          "url": "https://sanipexgroup.com/brands/surfaces",
-          "type": "featured",
-          "image": "/images/brands/surfaces.jpg",
-          "description": "A collection of the latest trends in many textures, finishes, sizes and formats, SURFACES by BAGNODESIGN offers a unique range of tiles and slabs for indoor and outdoor spaces.",
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "sant-agostino",
-          "name": "SANT'AGOSTINO",
-          "slug": "sant-agostino",
-          "url": "https://sanipexgroup.com/brands/sant-agostino",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "sartoria",
-          "name": "SARTORIA",
-          "slug": "sartoria",
-          "url": "https://sanipexgroup.com/brands/sartoria",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "settecento",
-          "name": "SETTECENTO",
-          "slug": "settecento",
-          "url": "https://sanipexgroup.com/brands/settecento",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "stella-1882",
-          "name": "Stella 1882",
-          "slug": "stella-1882",
-          "url": "https://sanipexgroup.com/brands/stella-1882",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        }
-      ]
-    },
-    {
-      "letter": "T",
-      "brands": [
-        {
-          "id": "talenti",
-          "name": "Talenti",
-          "slug": "talenti",
-          "url": "https://sanipexgroup.com/brands/talenti",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["outdoor", "lighting"]
-        },
-        {
-          "id": "terratinta",
-          "name": "terratinta ceramiche",
-          "slug": "terratinta",
-          "url": "https://sanipexgroup.com/brands/terratinta",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "tom-rossau",
-          "name": "TOM ROSSAU",
-          "slug": "tom-rossau",
-          "url": "https://sanipexgroup.com/brands/tom-rossau",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        },
-        {
-          "id": "tubadzin",
-          "name": "TUBĄDZIN",
-          "slug": "tubadzin",
-          "url": "https://sanipexgroup.com/brands/tubadzin",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["tiles_suite"]
-        },
-        {
-          "id": "tubes",
-          "name": "TUBES",
-          "slug": "tubes",
-          "url": "https://sanipexgroup.com/brands/tubes",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["outdoor"]
-        }
-      ]
-    },
-    {
-      "letter": "U",
-      "brands": [
-        {
-          "id": "urban-life",
-          "name": "URBAN LIFE",
-          "slug": "urban-life",
-          "url": "https://sanipexgroup.com/brands/urban-life",
-          "type": "featured",
-          "image": "/images/brands/urban-life.jpg",
-          "description": "Emphasising safety, practicality, and convenience, Urban Life provides stylish, contemporary outdoor furniture for public spaces. Crafted from durable materials, the range includes benches, litter bins, planters, bike racks.",
-          "categories": ["outdoor"]
-        }
-      ]
-    },
-    {
-      "letter": "V",
-      "brands": [
-        {
-          "id": "vistosi",
-          "name": "Vistosi",
-          "slug": "vistosi",
-          "url": "https://sanipexgroup.com/brands/vistosi",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["lighting"]
-        },
-        {
-          "id": "vitrifrigo",
-          "name": "VITRIFRIGO",
-          "slug": "vitrifrigo",
-          "url": "https://sanipexgroup.com/brands/vitrifrigo",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["kitchen", "hospitality"]
-        },
-        {
-          "id": "vola",
-          "name": "vola",
-          "slug": "vola",
-          "url": "https://sanipexgroup.com/brands/vola",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        }
-      ]
-    },
-    {
-      "letter": "W",
-      "brands": [
-        {
-          "id": "wellis",
-          "name": "Wellis",
-          "slug": "wellis",
-          "url": "https://sanipexgroup.com/brands/wellis",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["outdoor"]
-        },
-        {
-          "id": "windisch",
-          "name": "Windisch",
-          "slug": "windisch",
-          "url": "https://sanipexgroup.com/brands/windisch",
-          "type": "standard",
-          "image": null,
-          "description": null,
-          "categories": ["bathroom"]
-        }
-      ]
-    }
-  ]
 }

@@ -1,11 +1,10 @@
-import { Link } from "react-router";
+ import RecommendedForYou from "../components/features/RecommendedForYou";
 
- 
 export default function Landing() {
   return (
-    <>
-    <h1>Welcome to the Landing Page </h1>
-    <Link to="/brands">Brands</Link>
-    </>
-  )
+    <main>
+      <RecommendedForYou />
+       
+    </main>
+  );
 }

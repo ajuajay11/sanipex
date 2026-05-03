@@ -25,6 +25,20 @@ const router = createBrowserRouter([
           return { Component };
         },
       },
+      {
+        path: "brands/:name",
+        lazy: async () => {
+          const { default: Component } = await import("../views/BrandComingSoon");
+          return { Component };
+        },
+      },
+      {
+        path: "*",
+        lazy: async () => {
+          const { default: Component } = await import("../views/NotFound");
+          return { Component };
+        },
+      },
     ],
   },
 ]);
