@@ -14,7 +14,7 @@ export default function FilterCategoryTile({
   const inputId = `${inputIdPrefix}-${categoryId}`;
 
   return (
-    <li className="relative min-w-0">
+    <li className="relative min-w-0 rounded-sm" style={{boxShadow:"1px 1px 1px #23232315"}}>
       <input
         type="checkbox"
         id={inputId}

@@ -5,7 +5,7 @@ import LazyPicture from "./LazyPicture";
 import { categoryLogoById, categoryLabelById } from "../../common";
 
 const categoryIconClass =
-  "h-9 w-9 shrink-0 object-contain bg-[var(--template-color-secondary)] p-2 rounded-full";
+  "h-9 w-9 shrink-0 object-contain bg-[var(--template-color-tertiary)] p-2 rounded-full";
 
  const brandPagePath = (brand) => `/brands/${brand.slug ?? brand.id}`;
 

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import { Link } from "react-router";
 import TopHeader from "./TopHeader";
 import {
@@ -7,18 +7,14 @@ import {
   ShoppingCart,
   Menu,
   X,
-  Store,
-  BookOpen,
 } from "lucide-react";
 import HeaderCategories from "./HeaderCategories";
 import FullWidthSection from "../../ui/FullWidthSection";
+import MobileDrawer from "./MobileDrawer";
 import { logo } from "../../../common";
+import headerData from "../../../data/headerCategories";
+const { countries } = headerData;
 
-const countries = [
-  { code: "AE", label: "UAE", flag: "🇦🇪" },
-  { code: "GB", label: "UK", flag: "🇬🇧" },
-  { code: "US", label: "USA", flag: "🇺🇸" },
-];
 const cartCount = 3;
 
 const DRAWER_MS = 320;
@@ -26,9 +22,25 @@ const DRAWER_MS = 320;
 export default function Header() {
   const [drawerMounted, setDrawerMounted] = useState(false);
   const [drawerEntered, setDrawerEntered] = useState(false);
+  const [languageDrawerOpen, setLanguageDrawerOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState("AE");
+const headerRef = useRef(null);
 
+useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+
+    const observer = new ResizeObserver(([entry]) => {
+      const h = entry.contentRect.height;
+      document.documentElement.style.setProperty("--header-height", `${h}px`);
+    });
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
   const closeMenu = useCallback(() => {
     setDrawerEntered(false);
+    setLanguageDrawerOpen(false);
   }, []);
 
   const openMenu = useCallback(() => {
@@ -36,6 +48,19 @@ export default function Header() {
     requestAnimationFrame(() => {
       requestAnimationFrame(() => setDrawerEntered(true));
     });
+  }, []);
+
+  const toggleLanguageDrawer = useCallback(() => {
+    setLanguageDrawerOpen((open) => !open);
+  }, []);
+
+  const closeLanguageDrawer = useCallback(() => {
+    setLanguageDrawerOpen(false);
+  }, []);
+
+  const handleSelectCountry = useCallback((code) => {
+    setSelectedCountry(code);
+    setLanguageDrawerOpen(false);
   }, []);
 
   const handlePanelTransitionEnd = useCallback(
@@ -48,13 +73,13 @@ export default function Header() {
   );
 
   useEffect(() => {
-    if (!drawerMounted) return;
+    if (!drawerEntered) return;
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = prevOverflow;
     };
-  }, [drawerMounted]);
+  }, [drawerEntered]);
 
   useEffect(() => {
     if (!drawerMounted || !drawerEntered) return;
@@ -65,13 +90,24 @@ export default function Header() {
     return () => document.removeEventListener("keydown", onKey);
   }, [drawerMounted, drawerEntered, closeMenu]);
 
+  useEffect(() => {
+    if (!languageDrawerOpen) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") closeLanguageDrawer();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [languageDrawerOpen, closeLanguageDrawer]);
+
   return (
-    <header className="topheader sticky top-0 z-50 w-full bg-white shadow-sm">
+    <>
       <div className="hidden border-b border-gray-100 lg:block">
         <FullWidthSection bg="bg-white">
           <TopHeader />
         </FullWidthSection>
       </div>
+
+      <header className="topheader sticky top-0 z-50 w-full bg-white shadow-sm" ref={headerRef}>
 
       <FullWidthSection bg="bg-white">
         <div className="flex items-center justify-between gap-3 border-b border-gray-100 py-2 lg:hidden">
@@ -111,30 +147,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <div
-          className="border-b border-gray-100 px-0 pb-3 pt-1 lg:hidden"
-          role="search"
-        >
-          <label htmlFor="site-search-mobile-bar" className="sr-only">
-            Search products
-          </label>
-          <div className="flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2 focus-within:ring-2 focus-within:ring-gray-400">
-            <input
-              id="site-search-mobile-bar"
-              type="search"
-              placeholder="Search"
-              autoComplete="off"
-              className="min-w-0 flex-1 bg-transparent text-sm outline-none"
-            />
-            <button
-              type="button"
-              aria-label="Submit search"
-              className="shrink-0 text-gray-500 hover:text-gray-800"
-            >
-              <Search size={14} aria-hidden="true" strokeWidth={2} />
-            </button>
-          </div>
-        </div>
+
 
         <div className="hidden gap-4 border-b border-gray-100 py-2 lg:grid lg:grid-cols-3 lg:items-center">
           <Link
@@ -146,7 +159,7 @@ export default function Header() {
               src={logo}
               alt="Sanipex Group"
               className="h-12 w-auto"
-              width={180}
+              width={160}
               height={48}
               decoding="async"
               fetchPriority="high"
@@ -157,7 +170,7 @@ export default function Header() {
             <label htmlFor="site-search" className="sr-only">
               Search products
             </label>
-            <div className="flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2 focus-within:ring-2 focus-within:ring-gray-400">
+            <div className="flex items-center gap-2  bg-[var(--template-color-tertiary)] rounded-full border border-gray-300 px-4 py-2 focus-within:ring-2 focus-within:ring-gray-400">
               <input
                 id="site-search"
                 type="search"
@@ -175,203 +188,108 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="flex items-center justify-end gap-5">
+          <div className="flex items-center justify-end gap-3">
             <Link
               to="/showrooms"
-              className="flex flex-col items-center gap-0.5 text-xs text-gray-700 hover:text-black"
+              className="flex items-center gap-2 text-xs text-gray-700 hover:text-black"
               aria-label="Showrooms"
             >
-              <Store size={22} aria-hidden="true" strokeWidth={2} />
+              <img
+                src="https://sanipexgroup.com/media/wysiwyg/Showroom_Icon.svg"
+                alt=""
+                className="h-5 w-5 flex-shrink-0"
+                aria-hidden="true"
+              />
               <span>Showrooms</span>
             </Link>
 
             <Link
               to="/brochures"
-              className="flex flex-col items-center gap-0.5 rounded text-xs hover:text-black"
+              className="flex items-center gap-2 rounded text-xs hover:text-black"
               aria-label="Download Brochures"
             >
-              <BookOpen size={20} aria-hidden="true" strokeWidth={2} />
+              <img
+                src="https://sanipexgroup.com/media/wysiwyg/Brochure_Icon.svg"
+                alt=""
+                className="h-5 w-5 flex-shrink-0"
+                aria-hidden="true"
+              />
               <span>Brochures</span>
             </Link>
 
-            <div>
-              <label htmlFor="country-select" className="sr-only">
-                Select country
-              </label>
-              <select
-                id="country-select"
-                defaultValue="AE"
-                className="cursor-pointer border-none bg-transparent text-sm outline-none"
-              >
-                {countries.map((c) => (
-                  <option key={c.code} value={c.code}>
-                    {c.flag} {c.label}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <div className="flex items-center justify-end gap-1">
+               <div className="relative">
+                <button
+                  type="button"
+                  className="flex items-center gap-2 rounded-full border border-gray-200 bg-white p-2 text-sm text-gray-700 hover:bg-gray-50"
+                  onClick={toggleLanguageDrawer}
+                  aria-expanded={languageDrawerOpen}
+                  aria-haspopup="true"
+                >
+                  <span>{countries.find((c) => c.code === selectedCountry)?.flag}</span>
+                </button>
+                {languageDrawerOpen ? (
+                  <div className="absolute right-0 z-50 mt-2 w-48 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-xl ">
+                    <div className="flex flex-col">
+                      {countries.map((country) => (
+                        <button
+                          key={country.code}
+                          type="button"
+                          onClick={() => handleSelectCountry(country.code)}
+                          className="flex items-center gap-2 px-3 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          <span>{country.flag}</span>
+                          <span>{country.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
 
-            <Link
-              to="/account"
-              aria-label="My account"
-              className="text-gray-700 hover:text-black"
-            >
-              <User size={18} aria-hidden="true" strokeWidth={2} />
-            </Link>
+              <Link to="/account" aria-label="My account" className="text-gray-700 hover:text-black p-1">
+                <User size={18} aria-hidden="true" strokeWidth={2} />
+              </Link>
 
-            <div className="flex items-center gap-2 text-gray-700">
-              <span
-                aria-hidden="true"
-                className="text-lg font-light text-gray-300"
-              >
-                |
-              </span>
+              <span aria-hidden="true" className="text-lg font-light text-gray-300">|</span>
+
               <Link
                 to="/cart"
                 aria-label={`Shopping cart, ${cartCount} items`}
-                className="flex items-center gap-1.5 hover:text-black"
+                className="flex items-center gap-1.5 text-gray-700 hover:text-black"
               >
                 <ShoppingCart size={18} aria-hidden="true" strokeWidth={2} />
                 <span className="text-sm font-medium">{cartCount}</span>
               </Link>
             </div>
+
+
+
           </div>
         </div>
       </FullWidthSection>
 
-      <div className="hidden border-b border-gray-100 lg:block">
-        <FullWidthSection bg="bg-white">
-          <HeaderCategories />
-        </FullWidthSection>
-      </div>
-
       {drawerMounted ? (
-        <>
-          <button
-            type="button"
-            className={`fixed inset-0 z-[60] bg-black/40 lg:hidden ${drawerEntered ? "opacity-100" : "pointer-events-none opacity-0"}`}
-            style={{
-              transitionProperty: "opacity",
-              transitionDuration: `${DRAWER_MS}ms`,
-              transitionTimingFunction: "cubic-bezier(0.32, 0.72, 0, 1)",
-            }}
-            aria-label="Close menu"
-            onClick={closeMenu}
-          />
-          <div
-            id="header-mobile-drawer"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Site menu"
-            className={`fixed inset-y-0 left-0 z-[70] flex w-full max-w-md flex-col bg-white shadow-2xl lg:hidden ${drawerEntered ? "translate-x-0" : "-translate-x-full"}`}
-            style={{
-              transitionProperty: "transform",
-              transitionDuration: `${DRAWER_MS}ms`,
-              transitionTimingFunction: "cubic-bezier(0.32, 0.72, 0, 1)",
-            }}
-            onTransitionEnd={handlePanelTransitionEnd}
-          >
-            <div className="flex shrink-0 items-center justify-between border-b border-gray-100 px-4 py-3">
-              <span className="text-sm font-semibold tracking-wide text-gray-900">
-                Menu
-              </span>
-              <button
-                type="button"
-                className="flex h-11 w-11 items-center justify-center rounded-lg text-gray-800 hover:bg-gray-100"
-                onClick={closeMenu}
-                aria-label="Close menu"
-              >
-                <X size={22} aria-hidden="true" strokeWidth={2} />
-              </button>
-            </div>
-            <div
-              className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-4 pb-8"
-              data-lenis-prevent
-            >
-              <TopHeader forDrawer />
-
-              <div className="mt-6 border-b border-gray-100 pb-6" role="search">
-                <label htmlFor="site-search-drawer" className="sr-only">
-                  Search products
-                </label>
-                <div className="flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2.5 focus-within:ring-2 focus-within:ring-gray-400">
-                  <input
-                    id="site-search-drawer"
-                    type="search"
-                    placeholder="Search"
-                    autoComplete="off"
-                    className="flex-1 bg-transparent text-sm outline-none"
-                  />
-                  <button
-                    type="button"
-                    aria-label="Submit search"
-                    className="text-gray-500 hover:text-gray-800"
-                  >
-                    <Search size={14} aria-hidden="true" strokeWidth={2} />
-                  </button>
-                </div>
-              </div>
-
-              <nav
-                className="mt-6 flex flex-col gap-3 border-b border-gray-100 pb-6"
-                aria-label="Quick links"
-              >
-                <Link
-                  to="/showrooms"
-                  className="flex items-center gap-3 py-2 text-sm font-medium text-gray-800 hover:text-black"
-                  onClick={closeMenu}
-                >
-                  <Store size={22} aria-hidden="true" strokeWidth={2} />
-                  Showrooms
-                </Link>
-                <Link
-                  to="/brochures"
-                  className="flex items-center gap-3 py-2 text-sm font-medium text-gray-800 hover:text-black"
-                  onClick={closeMenu}
-                >
-                  <BookOpen size={20} aria-hidden="true" strokeWidth={2} />
-                  Brochures
-                </Link>
-                <Link
-                  to="/account"
-                  className="flex items-center gap-3 py-2 text-sm font-medium text-gray-800 hover:text-black"
-                  onClick={closeMenu}
-                >
-                  <User size={18} aria-hidden="true" strokeWidth={2} />
-                  My account
-                </Link>
-              </nav>
-
-              <div className="mt-6 border-b border-gray-100 pb-6">
-                <label
-                  htmlFor="country-select-drawer"
-                  className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500"
-                >
-                  Country
-                </label>
-                <select
-                  id="country-select-drawer"
-                  defaultValue="AE"
-                  className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-gray-300"
-                >
-                  {countries.map((c) => (
-                    <option key={c.code} value={c.code}>
-                      {c.flag} {c.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="mt-6">
-                <h2 className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
-                  Categories
-                </h2>
-                <HeaderCategories variant="drawer" onNavigate={closeMenu} />
-              </div>
-            </div>
-          </div>
-        </>
+        <MobileDrawer
+          drawerMounted={drawerMounted}
+          drawerEntered={drawerEntered}
+          DRAWER_MS={DRAWER_MS}
+          closeMenu={closeMenu}
+          handlePanelTransitionEnd={handlePanelTransitionEnd}
+          toggleLanguageDrawer={toggleLanguageDrawer}
+          languageDrawerOpen={languageDrawerOpen}
+          selectedCountry={selectedCountry}
+          handleSelectCountry={handleSelectCountry}
+          countries={countries}
+        />
       ) : null}
     </header>
+
+    <div className="hidden border-b border-gray-100 lg:block">
+      <FullWidthSection bg="bg-white">
+        <HeaderCategories />
+      </FullWidthSection>
+    </div>
+    </>
   );
 }

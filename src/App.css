@@ -123,7 +123,7 @@
   }
 
   .alpha-btn {
-    font-size: 12px;
+    font-size: clamp(10px, 4vw, 12px);
     font-weight: 500;
     border-radius: 50%;
     border: 1px solid var(--border);
@@ -203,4 +203,8 @@
 .hcat-badge--drawer {
     right: 4px;
     top: -6px;
+}
+.filternav_scroll{
+    scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 }

@@ -4,12 +4,12 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import App from "../App";
 import Landing from "../views/Landing";
-
+import Preloader from "../components/features/Preloader";
 const router = createBrowserRouter([
   {
     path: "/",
     Component: App,
-    HydrateFallback: () => <div>Loading...</div>, 
+    HydrateFallback: () => <Preloader />, 
     children: [
       {
         path: "",

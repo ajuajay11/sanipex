@@ -7,9 +7,9 @@ export default function SectionLabel({
 }) {
   return (
     <Comp
-      className={`mb-3 font-medium text-neutral-700 ${className}`.trim()}
+      className={`mb-3 font-bold text-neutral-700 ${className}`.trim()}
       style={{
-        fontSize: "clamp(10px, 4vw, 14px)",
+        fontSize: "clamp(8px, 4vw, 10px)",
       }}
       {...props}
     >

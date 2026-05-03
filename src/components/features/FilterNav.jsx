@@ -90,8 +90,8 @@ function FilterDrawerBody({
                                         disabled
                                             ? `No brands for letter ${letter}`
                                             : active
-                                              ? `Remove letter ${letter} filter`
-                                              : `Filter brands by letter ${letter}`
+                                                ? `Remove letter ${letter} filter`
+                                                : `Filter brands by letter ${letter}`
                                     }
                                     className={`alpha-btn flex h-9 w-full items-center justify-center rounded
             ${active ? "alpha-btn--active" : ""}
@@ -177,14 +177,14 @@ function FilterNav({
     return (
         <>
             <aside
-                className="filter-nav sticky top-30 hidden w-1/5 shrink-0 flex-col gap-5 self-start p-3 lg:flex"
-                aria-label="Brand search and filters"
+                className="filter-nav filternav_scroll sticky top-[var(--header-height)] hidden w-1/4 shrink-0 flex-col gap-1 self-start p-3 lg:flex overflow-y-auto"
+                aria-label="Brand search and filters" style={{ height: "85dvh" }}
+                data-lenis-prevent
             >
                 <FilterDrawerBody {...drawerProps} />
             </aside>
 
-            {/* Mobile / tablet: filter popover (categories + A–Z) under icon; search stays in row */}
-            <div className="brands-mobile-filter-bar w-full lg:hidden">
+            <div className="brands-mobile-filter-bar sticky top-[var(--header-height)] z-40 w-full bg-white lg:hidden">
                 <div className="flex items-center gap-2">
                     <div className="relative shrink-0" ref={popoverRef}>
                         <button
@@ -208,7 +208,7 @@ function FilterNav({
                                 id="mobile-filter-popover"
                                 role="region"
                                 aria-label="Brand filters"
-                                className="absolute top-full left-0 z-[100] mt-1.5 flex max-h-[min(70vh,28rem)] w-[min(calc(100vw-1.5rem),18rem)] flex-col overflow-hidden rounded-xl border border-neutral-200/90 bg-[#f8f8f8] shadow-lg"
+                                className="absolute top-full left-0 z-[100] mt-1.5 flex max-h-[min(86dvh,28rem)] w-[min(calc(100vw-1.5rem),18rem)] flex-col overflow-hidden rounded-xl border border-neutral-200/90 bg-[#f8f8f8] shadow-lg"
                             >
                                 <div
                                     className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-3 pb-14"

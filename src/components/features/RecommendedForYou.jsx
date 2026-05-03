@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import FullWidthSection from "../ui/FullWidthSection";
 import LazyImage from "../ui/LazyImage";
 
@@ -18,9 +19,7 @@ const badgeBase =
   "absolute bottom-0 left-0 z-10 rounded-sm px-4 py-1 text-left text-[11px] font-semibold leading-tight text-white sm:text-xs";
 
 export default function RecommendedForYou({
-  collectionHref = "https://sanipexgroup.com/",
-  newArrivalsHref = "https://sanipexgroup.com/",
-  saleHref = "https://sanipexgroup.com/",
+  link = "/brands",
 }) {
   return (
     <FullWidthSection className="py-10 md:py-14">
@@ -33,8 +32,8 @@ export default function RecommendedForYou({
         </h2>
 
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-3 md:grid-cols-2 md:grid-rows-2 md:gap-4 md:min-h-[min(520px,72vh)]">
-          <a
-            href={collectionHref}
+          <Link
+            to={link}
             className={`${tileLinkClass} min-h-[min(280px,55vw)] md:row-span-2 md:min-h-0`}
             aria-label="Collection of the Month — view collection"
           >
@@ -47,10 +46,10 @@ export default function RecommendedForYou({
               fetchPriority="high"
             />
             <span className={`${badgeBase} bg-[var(--accent)]`}>Collection of the Month</span>
-          </a>
+          </Link>
 
-          <a
-            href={newArrivalsHref}
+          <Link
+            to={link}
             className={`${tileLinkClass} min-h-[min(200px,40vw)] md:min-h-0`}
             aria-label="New Arrivals — view latest products"
           >
@@ -60,10 +59,10 @@ export default function RecommendedForYou({
               className={imgClass}
             />
             <span className={`${badgeBase} bg-[var(--template-color-primary)]`}>New Arrivals</span>
-          </a>
+          </Link>
 
-          <a
-            href={saleHref}
+          <Link
+            to={link}
             className={`${tileLinkClass} min-h-[min(200px,40vw)] md:min-h-0`}
             aria-label="Sale — view promotional offers"
           >
@@ -73,7 +72,7 @@ export default function RecommendedForYou({
               className={imgClass}
             />
              
-          </a>
+          </Link>
         </div>
       </section>
     </FullWidthSection>

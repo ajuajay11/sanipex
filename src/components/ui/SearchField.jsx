@@ -15,7 +15,7 @@ export default function SearchField({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`mt-3 w-full rounded border border-neutral-300 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400 rounded-full ${showIcon ? "pl-3 pr-10" : "px-3"}`}
+        className={`mt-2 w-full rounded border border-neutral-300 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400 rounded-full ${showIcon ? "pl-3 pr-10" : "px-3"}`}
         {...inputProps}
       />
       {showIcon ? (

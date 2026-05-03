@@ -14,9 +14,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  plugins: [react(), tailwindcss(),svgr()],
-  esbuild: {
-    loader: 'jsx',
-    include: /src\/.*\.js$/,
-  },
+  plugins: [react(), tailwindcss(), svgr()],
 })

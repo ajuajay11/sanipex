@@ -11,4 +11,11 @@ const categories = [
   { id: 11, name: "Inspiration",   badge: null },
   { id: 12, name: "SALE",          badge: null, isSale: true },
 ];
-export default categories;
+
+const countries = [
+  { code: "AE", label: "UAE", flag: "🇦🇪" },
+  { code: "GB", label: "UK", flag: "🇬🇧" },
+  { code: "US", label: "USA", flag: "🇺🇸" },
+];
+
+export default  { categories, countries }; 

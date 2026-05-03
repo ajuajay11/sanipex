@@ -1,0 +1,38 @@
+export const SLIDES = [
+  {
+    id: 1,
+    src: "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=1512,height=605/https://sanipexgroup.com/media/mageplaza/bannerslider/banner/image/m/a/main_outdoor_banner.webp",
+    alt: "Outdoor living collection",
+    eyebrow: "30 Years of Luxury Living",
+    heading: "Outdoor",
+    body: "Transform your outdoor spaces with curated collections that blend natural beauty with refined craftsmanship — from terraces to poolside sanctuaries.",
+    cta: { label: "Shop Now", to: "/brands" },
+  },
+  {
+    id: 2,
+    src: "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=1512,height=605/https://sanipexgroup.com/media/mageplaza/bannerslider/banner/image/m/a/main_hardware_banner_1.webp",
+    alt: "Hardware collection",
+    eyebrow: "30 Years of Luxury Living",
+    heading: "Hardware",
+    body: "Refine every detail with architectural hardware in a wide choice of aspirational finishes that complement every interior.",
+    cta: { label: "Shop Now", to: "/brands" },
+  },
+  {
+    id: 3,
+    src: "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=1512,height=605/https://sanipexgroup.com/media/mageplaza/bannerslider/banner/image/g/i/ginza_main_page_slider_banner_01.webp",
+    alt: "Ginza by BAGNODESIGN",
+    eyebrow: "30 Years of Luxury Living",
+    heading: "Ginza by BAGNODESIGN",
+    body: "Channel the dynamic energy and creativity of Tokyo's Ginza district. Playful, expressive design for contemporary bathrooms and children's spaces.",
+    cta: { label: "Discover Collection", to: "/brands/bagnodesign" },
+  },
+  {
+    id: 4,
+    src: "https://sanipexgroup.com/cdn-cgi/image/format=webp,width=1512,height=605/https://sanipexgroup.com/media/mageplaza/bannerslider/banner/image/g/i/ginza_main_page_slider_banner_01.webp",
+    alt: "Fonteyn by SANAURA",
+    eyebrow: "30 Years of Luxury Living",
+    heading: "Fonteyn by SANAURA",
+    body: "Graceful, sophisticated and sculptural, Fonteyn lighting by SANAURA channels mid-century modern for any bathroom.",
+    cta: { label: "Explore Now", to: "/brands/sanaura" },
+  },
+];

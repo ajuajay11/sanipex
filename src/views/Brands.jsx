@@ -38,7 +38,7 @@ export default function Brands() {
         <div className="min-h-screen">
             <BrandsHero />
 
-            <FullWidthSection className="py-2 lg:py-5 flex flex-col items-start gap-8 lg:flex-row">
+            <FullWidthSection className="py-2 lg:py-5 flex flex-col items-start gap-8 lg:flex-row"id="brands-content">
                 <FilterNav search={search} setSearch={setSearch} categories={categories} activeCategories={activeCategories} setActiveCategories={setActiveCategories} toggleCategory={toggleCategory} alphabet={alphabet} activeLetter={activeLetter} setActiveLetter={setActiveLetter} />
                 <main className="flex-1 w-full min-w-0">
                     {loading ? (

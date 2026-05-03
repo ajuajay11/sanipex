@@ -1,5 +1,7 @@
 import { Link } from "react-router";
-import categories from "../../../data/headerCategories";
+import headerData from "../../../data/headerCategories";
+
+const { categories } = headerData;
  
 function HeaderCategories({ variant = "horizontal", onNavigate }) {
   const isDrawer = variant === "drawer";

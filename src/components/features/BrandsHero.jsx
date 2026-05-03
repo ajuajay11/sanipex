@@ -13,7 +13,7 @@ export default function BrandsHero() {
     <FullWidthSection bg="bg-[#f8f8f8]" className="pb-3 pt-4 lg:pb-5">
       <div
         className="relative w-full overflow-hidden rounded-2xl ring-1 ring-black/10 lg:rounded-3xl"
-        style={{ aspectRatio: "220 / 50" }}
+        aria-label="Carlyle hero banner"
       >
         <LazyImage
           src={HERO_SRC}
@@ -29,7 +29,7 @@ export default function BrandsHero() {
           aria-hidden
         />
 
-        <div className="relative z-10 flex h-full min-h-[200px] flex-col justify-between gap-6 p-4 sm:p-5 md:min-h-0 md:p-6 lg:p-8">
+        <div className="relative z-10 flex h-[50dvh] flex-col justify-between gap-6 p-4 sm:p-5  md:p-6 lg:p-8">
           <nav className="flex flex-wrap items-center gap-2 text-sm" aria-label="Breadcrumb">
             <Link to="/" className={crumbLinkClass}>
               Home

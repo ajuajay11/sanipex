@@ -3,6 +3,8 @@
 :root {
   --template-color-primary: #1b2fb4;
   --template-color-secondary: #09330942;
+  --template-color-tertiary: #b0b0b042
+;
   --bg: #fff;
   --bg-secondary: #f5f5f5;
   --border: #09330942;
@@ -57,15 +59,15 @@ body {
 }
 
 p {
-  font-size: clamp(12px, 4vw, 14px);
+  font-size: clamp(10px, 4vw, 12px);
 }
 
 span {
-  font-size: clamp(12px, 4vw, 14px);
+  font-size: clamp(10px, 4vw, 12px);
 }
 
 small {
-  font-size: clamp(12px, 4vw, 14px);
+  font-size: clamp(10px, 4vw, 12px);
 }
 
 a {
@@ -77,6 +79,10 @@ a {
   &:hover {
     color: var(--text-h);
   }
+}
+
+.topheader {
+  font-size: clamp(12px, 4vw, 14px);
 }
 
 .sale {
@@ -100,13 +106,7 @@ a {
 /* Sticky A–Z: extra top offset on small screens so letter clears category strip */
 .sticky-alpha-bar {
   position: sticky;
-  top: clamp(1.5rem, 7.2rem + 5vw, 10.75rem);
-}
-
-@media (min-width: 1024px) {
-  .sticky-alpha-bar {
-    top: 8.125rem;
-  }
+  top: var(--header-height);
 }
 
 .stickyAlpha {
