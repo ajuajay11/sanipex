@@ -34,7 +34,7 @@ export default function RecommendedForYou({
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:grid-rows-2 md:gap-4 md:min-h-[min(520px,72vh)]">
           <Link
             to={link}
-            className={`${tileLinkClass} min-h-[min(280px,55vw)] md:row-span-2 md:min-h-0`}
+            className={`${tileLinkClass} aspect-[4/3] w-full md:aspect-auto md:row-span-2 md:min-h-0`}
             aria-label="Collection of the Month — view collection"
           >
             <LazyImage
@@ -50,7 +50,7 @@ export default function RecommendedForYou({
 
           <Link
             to={link}
-            className={`${tileLinkClass} min-h-[min(200px,40vw)] md:min-h-0`}
+            className={`${tileLinkClass} aspect-[4/3] w-full md:aspect-auto md:min-h-0`}
             aria-label="New Arrivals — view latest products"
           >
             <LazyImage
@@ -63,7 +63,7 @@ export default function RecommendedForYou({
 
           <Link
             to={link}
-            className={`${tileLinkClass} min-h-[min(200px,40vw)] md:min-h-0`}
+            className={`${tileLinkClass} aspect-[4/3] w-full md:aspect-auto md:min-h-0`}
             aria-label="Sale — view promotional offers"
           >
             <LazyImage

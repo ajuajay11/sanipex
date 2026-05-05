@@ -117,14 +117,12 @@ export default function Hero() {
     timerRef.current = setInterval(next, INTERVAL);
   }, [next]);
 
-  // ── Mount: initial anim + timer ───────────────────────
   useEffect(() => {
     resetImages(0);
     animateTextIn();
     startProgress();
     timerRef.current = setInterval(next, INTERVAL);
 
-    // Scroll-triggered fade in
     if (heroRef.current) {
       gsap.set(heroRef.current, { opacity: 0 });
       gsap.to(heroRef.current, {
@@ -161,7 +159,6 @@ export default function Hero() {
   return (
     <div ref={heroRef} className="relative h-[75dvh] min-h-[480px] w-full overflow-hidden bg-black">
 
-      {/* Images */}
       {SLIDES.map((s, i) => (
         <div
           key={s.id}
@@ -179,11 +176,25 @@ export default function Hero() {
         </div>
       ))}
 
-       <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/25 to-transparent" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+      <div
+        className="pointer-events-none absolute inset-0 z-10 bg-black/20"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-black/75 via-black/35 to-black/10"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-black/25"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_120%_80%_at_70%_50%,transparent_0%,rgba(0,0,0,0.35)_100%)]"
+        aria-hidden
+      />
 
-       <div className="absolute inset-0 z-20 flex items-end pb-16 pl-8 pr-8 sm:pl-14 lg:pl-20 lg:pb-20 justify-end">
-        <div className="max-w-lg">
+       <div className="pointer-events-none absolute inset-0 z-20">
+        <div className="pointer-events-auto absolute top-1/2 left-1/2 w-full max-w-lg -translate-x-1/2 -translate-y-1/2 px-10 sm:px-12 md:left-[75%] md:w-[min(32rem,calc(100%-4rem))] md:-translate-x-1/2 md:px-4 lg:px-6 text-center md:text-left">
           <p
             ref={eyebrowRef}
             className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-white/60"
@@ -200,7 +211,7 @@ export default function Hero() {
           </h1>
           <p
             ref={bodyRef}
-            className="mb-7 max-w-sm text-sm leading-relaxed text-white/75 sm:text-base"
+            className="mb-7 mx-auto max-w-sm text-sm leading-relaxed text-white/75 sm:text-base md:mx-0"
             style={{ opacity: 0 }}
           >
             {slide.body}
@@ -224,7 +235,7 @@ export default function Hero() {
         type="button"
         onClick={() => { prev(); resetTimer(); }}
         aria-label="Previous slide"
-        className="absolute left-4 top-1/2 z-30 -translate-y-1/5 flex h-10 w-10 items-center justify-center border border-white/30 bg-black/20 text-white backdrop-blur-sm transition hover:bg-black/50 sm:left-6"
+        className="absolute left-4 top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-white/30 bg-black/20 text-white backdrop-blur-sm transition hover:bg-black/50 md:flex sm:left-6"
       >
         <ChevronLeft size={20} />
       </button>
@@ -232,11 +243,19 @@ export default function Hero() {
         type="button"
         onClick={() => { next(); resetTimer(); }}
         aria-label="Next slide"
-        className="absolute right-4 top-1/2 z-30 -translate-y-1/5 flex h-10 w-10 items-center justify-center border border-white/30 bg-black/20 text-white backdrop-blur-sm transition hover:bg-black/50 sm:right-6"
+        className="absolute top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-white/30 bg-black/20 text-white backdrop-blur-sm transition hover:bg-black/50 md:flex right-10 sm:right-14 lg:right-[4.5rem]"
       >
         <ChevronRight size={20} />
       </button>
-       <div className="absolute bottom-6 left-0 right-0 z-30 flex items-center justify-between px-8 sm:px-14 lg:px-20">
+       <div className="absolute bottom-6 left-0 right-0 z-30 flex items-center gap-2 pl-3 pr-3 sm:gap-3 sm:pl-6 sm:pr-8 md:justify-between md:pl-8 md:pr-12 lg:pl-20 lg:pr-28">
+        <button
+          type="button"
+          onClick={() => { prev(); resetTimer(); }}
+          aria-label="Previous slide"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-white/30 bg-black/25 text-white backdrop-blur-sm transition hover:bg-black/45 md:hidden"
+        >
+          <ChevronLeft size={18} />
+        </button>
 
          <div className="font-['Cormorant_Garamond',Georgia,serif] text-xs tracking-widest text-white/50">
           <span ref={counterRef} className="text-white">
@@ -246,7 +265,7 @@ export default function Hero() {
           {String(SLIDES.length).padStart(2, "0")}
         </div>
 
-         <div className="flex items-center gap-3">
+         <div className="flex flex-1 items-center justify-center gap-3 md:flex-none md:justify-end">
           {SLIDES.map((s, i) => (
             <button
               key={s.id}
@@ -266,6 +285,14 @@ export default function Hero() {
             </button>
           ))}
         </div>
+        <button
+          type="button"
+          onClick={() => { next(); resetTimer(); }}
+          aria-label="Next slide"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-white/30 bg-black/25 text-white backdrop-blur-sm transition hover:bg-black/45 md:hidden"
+        >
+          <ChevronRight size={18} />
+        </button>
       </div>
     </div>
   );

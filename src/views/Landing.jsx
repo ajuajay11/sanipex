@@ -1,4 +1,4 @@
- import RecommendedForYou from "../components/features/RecommendedForYou";
+import RecommendedForYou from "../components/features/RecommendedForYou";
 import FeaturedCollections from "../components/features/FeaturedCollections";
 import Hero from "../components/features/Hero";
 

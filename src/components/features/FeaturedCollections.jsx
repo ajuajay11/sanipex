@@ -20,7 +20,7 @@ export default function FeaturedCollections() {
           Featured Collections
         </h2>
 
-        <div className="overflow-x-auto overscroll-contain">
+        <div className="scrollbar-hide overflow-x-auto overscroll-contain">
           <div className="flex gap-3 pb-2 md:gap-4">
             {collections.map((collection) => (
               <Link

@@ -70,8 +70,6 @@
     }
   }
 
-  /* //filter nav */
-
   .filter-nav {
     background-color: #f8f8f875;
     
@@ -153,7 +151,6 @@
     pointer-events: none;
 }
 
-/* header-categories.css */
 .hcat-nav--horizontal {
     display: flex;
     align-items: center;

@@ -93,17 +93,12 @@ a {
   font-size: 12px;
 }
 
-/* Mobile brands: keep filter row under sticky header while scrolling */
 .brands-mobile-filter-bar {
-  /* position: sticky; */
-  /* top: clamp(9.5rem, 8.2rem + 5vw, 10.75rem); */
-  /* z-index: 40; */
   padding-bottom: 0.5rem;
   margin-bottom: -0.5rem;
   background: var(--bg);
 }
 
-/* Sticky A–Z: extra top offset on small screens so letter clears category strip */
 .sticky-alpha-bar {
   position: sticky;
   top: var(--header-height);
@@ -122,4 +117,18 @@ a {
   border-radius: 0 40% 40% 0;
   padding: 0 clamp(8px, 2vw + 4px, 20px) 0 0;
 
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.overflow-anchor-none {
+  overflow-anchor: none;
 }

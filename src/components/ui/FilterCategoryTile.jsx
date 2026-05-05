@@ -20,7 +20,10 @@ export default function FilterCategoryTile({
         id={inputId}
         className="peer sr-only"
         checked={checked}
-        onChange={onToggle}
+        onChange={(e) => {
+          onToggle();
+          queueMicrotask(() => e.currentTarget.focus({ preventScroll: true }));
+        }}
       />
       <label htmlFor={inputId} className={LABEL_CLASS}>
         {iconSrc ? (

@@ -6,7 +6,6 @@ import {
   User,
   ShoppingCart,
   Menu,
-  X,
 } from "lucide-react";
 import HeaderCategories from "./HeaderCategories";
 import FullWidthSection from "../../ui/FullWidthSection";

@@ -1,4 +1,3 @@
-//categories logos
 import Bathroom from "../assets/images/categories/Bathrooms.svg";
 import TilesSlabs from "../assets/images/categories/Tiles_Slabs.svg";
 import Kitchen from "../assets/images/categories/Kitchen_Lifestyle.svg";

@@ -75,7 +75,18 @@ function FilterDrawerBody({
                 </ul>
             </div>
             <div className="filter-nav mt-4">
-                <SectionLabel as="h2">A-Z FILTER</SectionLabel>
+                <div
+                    className={`mb-3 flex items-center gap-2 ${
+                        hasActiveFilters && !hideClear ? "justify-between" : ""
+                    }`}
+                >
+                    <SectionLabel as="h2" className="!mb-0">
+                        A-Z FILTER
+                    </SectionLabel>
+                    {hasActiveFilters && !hideClear ? (
+                        <ClearFiltersButton onClick={clearAllFilters} className="shrink-0" />
+                    ) : null}
+                </div>
                 <ul className="grid grid-cols-4 gap-1.5 content-center">
                     {alphabet.map(({ id, letter, disabled }) => {
                         const active = activeLetter === letter;
@@ -84,6 +95,7 @@ function FilterDrawerBody({
                                 <button
                                     type="button"
                                     disabled={disabled}
+                                    onMouseDown={(e) => e.preventDefault()}
                                     onClick={() => setActiveLetter(active ? null : letter)}
                                     aria-pressed={disabled ? undefined : active}
                                     aria-label={
@@ -104,9 +116,6 @@ function FilterDrawerBody({
                         );
                     })}
                 </ul>
-                {hasActiveFilters && !hideClear ? (
-                    <ClearFiltersButton onClick={clearAllFilters} className="mt-2" />
-                ) : null}
             </div>
         </>
     );
@@ -211,7 +220,7 @@ function FilterNav({
                                 className="absolute top-full left-0 z-[100] mt-1.5 flex max-h-[min(86dvh,28rem)] w-[min(calc(100vw-1.5rem),18rem)] flex-col overflow-hidden rounded-xl border border-neutral-200/90 bg-[#f8f8f8] shadow-lg"
                             >
                                 <div
-                                    className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-3 pb-14"
+                                    className="scrollbar-hide min-h-0 flex-1 overflow-y-auto overscroll-contain p-3 pb-14"
                                     data-lenis-prevent
                                 >
                                     <FilterDrawerBody {...drawerProps} showSearch={false} hideClear />
